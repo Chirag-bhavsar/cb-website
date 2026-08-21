@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maslow — UX Case Study</title>
+<meta name="description" content="Maslow — a mobile app case study connecting people in need with local charities, from information architecture through final UI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><img src="images/maslow-logo.png" alt="Maslow" class="brand-logo"></div>
+    <ul>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#persona">Persona</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+      <li><a href="#system">Design System</a></li>
+      <li><a href="#product">Screens</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+      <li><a href="../../index.html#work" class="back-link">&larr; Back to Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="overview">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">UX Case Study — Mobile App</div>
+      <h1>Connecting people in need with <em>local charities</em>.</h1>
+      <p class="sub">Maslow surfaces nearby charities the moment someone indicates what kind of help they need — food, shelter, clothing — and gives charities a direct channel to the people looking for them.</p>
+      <div class="meta-card">
+        <div><span>Role</span><p>End-to-End UX/UI Design</p></div>
+        <div><span>Platform</span><p>iOS, mobile-first</p></div>
+        <div><span>Deliverables</span><p>IA, Wireframes, Design System, Hi-Fi UI</p></div>
+        <div><span>Typeface</span><p>Lato</p></div>
+      </div>
+    </div>
+    <div class="hero-devices">
+      <div class="device d1"><img src="images/screen-home-map.jpg" alt="Maslow event map screen"></div>
+      <div class="device d2"><img src="images/splash.svg" alt="Maslow splash screen"></div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Brief</div>
+      <h2>Help exists nearby. Nobody can find it.</h2>
+    </div>
+    <div class="split-cards">
+      <div class="card reveal">
+        <h3 class="tag-problem">The Problem</h3>
+        <p class="lede">People who need help rarely know which local organization can provide it. A search for "food assistance near me" turns into a maze of hotlines, outdated flyers, and word of mouth — slow and often humbling at the exact moment someone needs speed and dignity.</p>
+        <ul>
+          <li>No single place to see which charities serve a given need nearby</li>
+          <li>Hotlines and directories are slow, outdated, or incomplete</li>
+          <li>Charities have no reliable channel to reach new people</li>
+          <li>No easy way to promote or manage in-person events</li>
+          <li>Manual, paper-based check-in at events</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="tag-solution">The Solution</h3>
+        <p class="lede">Maslow acts as a directory, locator, and engagement layer between the two groups — charities register the services they offer and where, and the app routes a user straight to the nearest source of help.</p>
+        <ul>
+          <li>Search by service type, resolved to nearby charities on a map or list</li>
+          <li>Charities register services, locations, and hosted events</li>
+          <li>Users browse and RSVP to charity-hosted events</li>
+          <li>QR check-in at events replaces paper sign-in sheets</li>
+          <li>Profile &amp; notifications keep the relationship going after day one</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="persona">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Who We Designed For</div>
+      <h2>Two sides of the same search.</h2>
+      <p>Maslow is a two-sided product — someone looking for help, and an organization trying to be found. Every flow decision traced back to one of these two people.</p>
+    </div>
+    <div class="persona-grid">
+      <div class="persona-card reveal">
+        <div class="persona-top">
+          <div class="persona-avatar" style="background:var(--teal);">MT</div>
+          <div class="persona-id"><h4>Maria, 34</h4><span>Seeking help &middot; first-time user</span></div>
+        </div>
+        <p class="persona-quote">"I don't want to make five phone calls to find out where to bring my kids for a meal tonight."</p>
+        <div class="quad-grid-2">
+          <div class="quad">
+            <h4>Goals</h4>
+            <ul>
+              <li>Find verified help in minutes, not hours</li>
+              <li>See exactly where and when it's available</li>
+              <li>Avoid explaining her situation over and over</li>
+            </ul>
+          </div>
+          <div class="quad">
+            <h4>Frustrations</h4>
+            <ul>
+              <li>Doesn't know which local orgs serve her area</li>
+              <li>Hotlines have long waits, unclear hours</li>
+              <li>Feels exposed asking for help in public</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="persona-card reveal">
+        <div class="persona-top">
+          <div class="persona-avatar" style="background:var(--coral);">DP</div>
+          <div class="persona-id"><h4>Diane, 52</h4><span>Charity program coordinator</span></div>
+        </div>
+        <p class="persona-quote">"We show up every week — the problem is nobody outside our regulars knows we're here."</p>
+        <div class="quad-grid-2">
+          <div class="quad">
+            <h4>Goals</h4>
+            <ul>
+              <li>List services and hours in one place</li>
+              <li>Get discovered by people nearby, not just regulars</li>
+              <li>Run events and track who actually shows up</li>
+            </ul>
+          </div>
+          <div class="quad">
+            <h4>Frustrations</h4>
+            <ul>
+              <li>No shared channel to reach new visitors</li>
+              <li>Manual check-in and paper sign-ins at events</li>
+              <li>Word-of-mouth doesn't scale past her block</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">UX Process</div>
+      <h2>From structure to detail.</h2>
+      <p>Before any screen was drawn, the product's structure was mapped, validated with a card-sorting exercise, and stress-tested as a flow — so visual design started on solid ground.</p>
+    </div>
+
+    <div class="reveal">
+      <p class="subhead">Information Architecture</p>
+      <p class="subnote">The experience was grouped around five pillars, keeping most tasks reachable within one or two taps of Home.</p>
+      <div class="ia-pillars">
+        <div class="pillar"><div class="pillar-icon">&#128269;</div><b>Search / Home</b><span>Discover services &amp; nearby help</span></div>
+        <div class="pillar"><div class="pillar-icon">&#128197;</div><b>Events</b><span>Charity-hosted events to attend</span></div>
+        <div class="pillar"><div class="pillar-icon">&#9639;</div><b>QR Scanner</b><span>Quick check-in on arrival</span></div>
+        <div class="pillar"><div class="pillar-icon">&#128100;</div><b>Profile</b><span>Account &amp; completion status</span></div>
+        <div class="pillar"><div class="pillar-icon">&#9881;</div><b>Notifications</b><span>Account management &amp; updates</span></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="subhead">User Flow</p>
+      <p class="subnote">Designed to get a first-time user from "I need help" to "I found a nearby service" in as few steps as possible.</p>
+      <div class="flow">
+        <div class="flow-step">Splash Screen</div><span class="flow-arrow">&rarr;</span>
+        <div class="flow-step">Onboarding</div><span class="flow-arrow">&rarr;</span>
+        <div class="flow-step">Login / Registration</div><span class="flow-arrow">&rarr;</span>
+        <div class="flow-step start">Home</div>
+      </div>
+      <div class="flow-branch-label">From Home — four core actions</div>
+      <div class="flow-branch">
+        <div class="flow-step">Search Services</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Search by Map</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-step">Events</div><span class="flow-arrow">&rarr;</span><div class="flow-step">QR Scanner</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Survey Form</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Submit</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-step">Profile</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Edit Profile</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Save</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-step">Settings</div><span class="flow-arrow">&rarr;</span><div class="flow-step">Notifications</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:56px;">
+      <p class="subhead">Card Sorting</p>
+      <p class="subnote">Run across five categories to confirm the IA matched real mental models — it validated that users separated "finding an event" from "checking in at one," which shaped two distinct flows.</p>
+      <div class="sort-grid">
+        <div class="bucket">
+          <div class="bucket-label">Events</div>
+          <div class="bucket-card">Map view with toggle to list view</div>
+          <div class="bucket-card">Filter events by type &amp; range (miles)</div>
+          <div class="bucket-card">Selecting an event opens its details page</div>
+        </div>
+        <div class="bucket">
+          <div class="bucket-label">QR Code</div>
+          <div class="bucket-card">Scan the QR code displayed at a charity event</div>
+          <div class="bucket-card">Answer survey questions the charity selected</div>
+        </div>
+        <div class="bucket">
+          <div class="bucket-label">Profile</div>
+          <div class="bucket-card">Complete Profile</div>
+          <div class="bucket-card">Update Profile</div>
+        </div>
+        <div class="bucket">
+          <div class="bucket-label">Settings</div>
+          <div class="bucket-card">General Settings</div>
+          <div class="bucket-card">Account Settings</div>
+          <div class="bucket-card">Other Settings</div>
+        </div>
+        <div class="bucket">
+          <div class="bucket-label">Notifications</div>
+          <div class="bucket-card">Update user about upcoming events</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="wireframes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Low-Fidelity Wireframes</div>
+      <h2>Testing the flow before the finish.</h2>
+      <p>Every screen in the core journey was blocked out in grayscale first, with annotations documenting intended behavior before a single color or icon was decided.</p>
+    </div>
+    <div class="strip reveal">
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-signin.png" alt="Low-fidelity sign in wireframe"></div><div class="cap">Sign In</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-register.png" alt="Low-fidelity register wireframe"></div><div class="cap">Register</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-events.png" alt="Low-fidelity events list wireframe"></div><div class="cap">Events List</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-map.png" alt="Low-fidelity event map wireframe"></div><div class="cap">Event Map</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-filter.png" alt="Low-fidelity event filters wireframe"></div><div class="cap">Event Filters</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-details.png" alt="Low-fidelity event details wireframe"></div><div class="cap">Event Details</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-profile.png" alt="Low-fidelity profile wireframe"></div><div class="cap">Profile</div></figure>
+      <figure class="frame-item wire"><div class="frame"><img src="images/wire-settings.png" alt="Low-fidelity settings wireframe"></div><div class="cap">Settings</div></figure>
+    </div>
+    <div class="annot reveal">
+      <b>Annotated behavior, straight from the wireframes:</b> "Allow user to open scanner when they arrive at event." &middot; "Event location will be shown on map." &middot; "Notify users their profile is incomplete." These notes kept the flow's logic agreed upon before visual design began.
+    </div>
+  </div>
+</section>
+
+<section id="system">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Visual Design System</div>
+      <h2>Calm, trustworthy, never clinical.</h2>
+      <p>The palette pairs a trustworthy teal — associated with care and support — with a warm coral accent, keeping the interface approachable for users who may be in a vulnerable moment.</p>
+    </div>
+    <div class="vis-grid reveal">
+      <div>
+        <p class="subhead" style="margin-bottom:20px;">Typography — Lato</p>
+        <div class="type-sample">
+          <div class="tlabel">Black / 900 &middot; Headings</div>
+          <div class="t900">Find help nearby</div>
+        </div>
+        <div class="type-sample">
+          <div class="tlabel">Bold / 700 &middot; UI Labels</div>
+          <div class="t700">Search an event</div>
+        </div>
+        <div class="type-sample">
+          <div class="tlabel">Regular / 400 &middot; Body</div>
+          <div class="t400">A humanist sans-serif chosen for its warmth and high legibility across screen sizes — fitting a product about accessible, human-centered support.</div>
+        </div>
+      </div>
+      <div>
+        <p class="subhead" style="margin-bottom:20px;">Color Palette</p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#2E918A;"></div><div class="info"><b>Teal</b><span>#2E918A</span><em>Primary brand &amp; primary actions</em></div></div>
+          <div class="swatch"><div class="chip" style="background:#185B58;"></div><div class="info"><b>Deep Teal</b><span>#185B58</span><em>Primary dark / pressed states</em></div></div>
+          <div class="swatch"><div class="chip" style="background:#D4E7DE;"></div><div class="info"><b>Mint</b><span>#D4E7DE</span><em>Secondary / soft backgrounds</em></div></div>
+          <div class="swatch"><div class="chip" style="background:#263238;"></div><div class="info"><b>Charcoal</b><span>#263238</span><em>Text / dark UI elements</em></div></div>
+          <div class="swatch"><div class="chip" style="background:#FAFAFA;border:1px solid rgba(0,0,0,.12);"></div><div class="info"><b>Off-White</b><span>#FAFAFA</span><em>Background / surface</em></div></div>
+          <div class="swatch"><div class="chip" style="background:#D46B6B;"></div><div class="info"><b>Coral</b><span>#D46B6B</span><em>Accent / alerts, secondary actions</em></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="product">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Product</div>
+      <h2>Final screens, shown end to end.</h2>
+      <p>High-fidelity screens from the real build, grouped by the flows they belong to.</p>
+    </div>
+
+    <div class="flowgroup reveal">
+      <div class="flowgroup-head"><h3>Onboarding</h3><span>Splash &rarr; Sign in / Sign up</span></div>
+      <div class="strip">
+        <figure class="frame-item"><div class="frame"><img src="images/screen-signin.jpg" alt="Sign in screen"></div><div class="cap">Sign In</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-signup.jpg" alt="Sign up screen"></div><div class="cap">Sign Up</div></figure>
+      </div>
+    </div>
+
+    <div class="flowgroup reveal">
+      <div class="flowgroup-head"><h3>Search &amp; Discovery</h3><span>Map view &middot; list view &middot; filters</span></div>
+      <div class="strip">
+        <figure class="frame-item"><div class="frame"><img src="images/screen-home-map.jpg" alt="Home map view"></div><div class="cap">Map View</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-home-list.jpg" alt="Home list view"></div><div class="cap">List View</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-filter.jpg" alt="Event filter"></div><div class="cap">Filters</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-event-details.jpg" alt="Event details"></div><div class="cap">Event Details</div></figure>
+      </div>
+    </div>
+
+    <div class="flowgroup reveal">
+      <div class="flowgroup-head"><h3>Event Check-In</h3><span>QR scan on arrival</span></div>
+      <div class="strip">
+        <figure class="frame-item"><div class="frame"><img src="images/screen-qr.jpg" alt="QR scanner"></div><div class="cap">QR Scanner</div></figure>
+      </div>
+    </div>
+
+    <div class="flowgroup reveal">
+      <div class="flowgroup-head"><h3>Profile &amp; Account</h3><span>Completion status &middot; edit &middot; settings</span></div>
+      <div class="strip">
+        <figure class="frame-item"><div class="frame"><img src="images/screen-profile.jpg" alt="Profile screen"></div><div class="cap">Profile</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-profile-edit.jpg" alt="Edit profile screen"></div><div class="cap">Edit Profile</div></figure>
+        <figure class="frame-item"><div class="frame"><img src="images/screen-settings.jpg" alt="Settings screen"></div><div class="cap">Settings</div></figure>
+      </div>
+    </div>
+
+    <div class="flowgroup reveal">
+      <div class="flowgroup-head"><h3>Notifications</h3><span>Updates on upcoming events</span></div>
+      <div class="strip">
+        <figure class="frame-item"><div class="frame"><img src="images/screen-notifications.jpg" alt="Notifications screen"></div><div class="cap">Notifications</div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="reflection">
+  <div class="wrap final-wrap">
+    <div class="reveal">
+      <div class="eyebrow">Reflection</div>
+      <h2>Structure first, detail second, identity last.</h2>
+      <p>Information architecture and user flow defined <em>where things live</em>. Card sorting validated <em>how users group them</em>. Wireframes tested <em>how the flow feels</em>. The visual design system gave the product <em>a warm, trustworthy identity</em>.</p>
+      <p>The result is a clear, low-friction path connecting someone in need directly to the charity best equipped to help them — and a direct channel for charities to reach the people they exist to serve.</p>
+      <div class="final-steps">
+        <span>IA</span><span>User Flow</span><span>Card Sorting</span><span>Wireframes</span><span>Visual Design</span>
+      </div>
+      <a class="fig-link" href="https://www.figma.com/design/6fCZ3NKr30eyZlRBWnKGeU/Maslow-4.0" target="_blank" rel="noopener">View the design file on Figma &rarr;</a>
+    </div>
+    <div class="reveal">
+      <div class="device-final"><img src="images/splash.svg" alt="Maslow splash screen"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand" style="justify-content:center;"><img src="images/maslow-logo.png" alt="Maslow" class="brand-logo"></div>
+  <p>A UX case study by Chirag — designed in Figma.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

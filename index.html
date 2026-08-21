@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chirag Bhavsar — UI/UX Designer</title>
+<meta name="description" content="Chirag Bhavsar — UI/UX Designer crafting high-performance digital experiences through precise code and meaningful design." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Geist:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23050505'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='900' font-size='15' fill='%233b82f6' text-anchor='middle'%3ECB%3C/text%3E%3C/svg%3E" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="dot-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<header class="navbar" id="navbar">
+  <a href="#home" class="logo">CB</a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#about" data-nav>ABOUT</a>
+    <a href="#work" data-nav>WORK</a>    
+    <a href="#contact" data-nav>CONTACT</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <h1 class="hero-name">
+      <span>CHIRAG</span>
+      <span>BHAVSAR</span>
+    </h1>
+
+    <div class="hero-meta">
+      <div class="hero-info">
+        <p class="hero-role">UI/UX Designer</p>
+        <p class="hero-desc">Crafting high-performance digital experiences through precise code and meaningful design. Based in San Francisco, working globally.</p>
+      </div>
+
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR PROJECTS</span>
+      </div>
+    </div>
+
+    <div class="hero-portrait" id="heroPortrait">
+      <picture>
+        <source srcset="images/chirag-portrait.webp" type="image/webp" />
+        <img src="images/chirag-portrait.png" alt="Portrait of Chirag Bhavsar" width="900" height="1200" />
+      </picture>
+    </div>
+
+    <div class="scroll-cue">
+      <span class="line"></span>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about">
+    <div class="section-head reveal">
+      <h2>ABOUT ME</h2>
+      <span class="section-index">01</span>
+    </div>
+
+    <div class="about-content reveal">
+      <p class="about-lead">Crafting Digital Experiences That Inspire &amp; Engage</p>
+      <p class="about-body">I am a passionate UI/UX designer with over 10+ years of experience creating intuitive, visually compelling digital products. From wireframes to pixel-perfect interfaces, I bring ideas to life through thoughtful design, user research, and a deep understanding of modern design systems. I thrive at the intersection of creativity and functionality.</p>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="skills">
+    <div class="section-head reveal">
+      <h2>SKILLS</h2>
+      <span class="section-index">01 — 06</span>
+    </div>
+
+    <div class="skills-row reveal-stagger" id="skillsRow">
+
+      <div class="skill" data-percent="93">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M22 3.6652H15.5826C13.8806 3.6652 12.2483 4.34124 11.0448 5.5446C9.84132 6.74796 9.1652 8.38006 9.1652 10.0819C9.1652 11.7837 9.84132 13.4158 11.0448 14.6191C12.2483 15.8225 13.8806 16.4985 15.5826 16.4985M22 3.6652V16.4985M22 3.6652H28.4174C29.2601 3.6652 30.0946 3.83117 30.8732 4.15364C31.6518 4.47611 32.3593 4.94876 32.9552 5.5446C33.5511 6.14044 34.0238 6.84781 34.3463 7.62631C34.6688 8.40482 34.8348 9.23922 34.8348 10.0819C34.8348 10.9245 34.6688 11.7589 34.3463 12.5374C34.0238 13.3159 33.5511 14.0233 32.9552 14.6191C32.3593 15.215 31.6518 15.6876 30.8732 16.0101C30.0946 16.3326 29.2601 16.4985 28.4174 16.4985M15.5826 16.4985H22M15.5826 16.4985C13.8806 16.4985 12.2483 17.1746 11.0448 18.3779C9.84132 19.5813 9.1652 21.2134 9.1652 22.9152C9.1652 24.617 9.84132 26.2491 11.0448 27.4525C12.2483 28.6558 13.8806 29.3319 15.5826 29.3319M22 16.4985H28.4174M22 16.4985V29.3319M28.4174 16.4985C27.5747 16.4985 26.7402 16.6645 25.9616 16.987C25.183 17.3094 24.4755 17.7821 23.8796 18.3779C23.2837 18.9738 22.811 19.6811 22.4885 20.4596C22.166 21.2382 22 22.0726 22 22.9152C22 23.7578 22.166 24.5922 22.4885 25.3708C22.811 26.1493 23.2837 26.8566 23.8796 27.4525C24.4755 28.0483 25.183 28.521 25.9616 28.8434C26.7402 29.1659 27.5747 29.3319 28.4174 29.3319C29.2601 29.3319 30.0946 29.1659 30.8732 28.8434C31.6518 28.521 32.3593 28.0483 32.9552 27.4525C33.5511 26.8566 34.0238 26.1493 34.3463 25.3708C34.6688 24.5922 34.8348 23.7578 34.8348 22.9152C34.8348 22.0726 34.6688 21.2382 34.3463 20.4596C34.0238 19.6811 33.5511 18.9738 32.9552 18.3779C32.3593 17.7821 31.6518 17.3094 30.8732 16.987C30.0946 16.6645 29.2601 16.4985 28.4174 16.4985ZM22 29.3319V35.7485C22 37.4503 21.3239 39.0824 20.1204 40.2858C18.9169 41.4892 17.2846 42.1652 15.5826 42.1652C13.8806 42.1652 12.2483 41.4892 11.0448 40.2858C9.84132 39.0824 9.1652 37.4503 9.1652 35.7485C9.1652 34.0467 9.84132 32.4146 11.0448 31.2113C12.2483 30.0079 13.8806 29.3319 15.5826 29.3319M22 29.3319H15.5826" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Figma</p>
+      </div>
+
+      <div class="skill" data-percent="89">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M38.5 27.4994L32.8423 21.8418C32.1547 21.1544 31.2223 20.7682 30.25 20.7682C29.2777 20.7682 28.3453 21.1544 27.6577 21.8418L11 38.4994M9.16667 5.5H34.8333C36.8584 5.5 38.5 7.14162 38.5 9.16667V34.8333C38.5 36.8584 36.8584 38.5 34.8333 38.5H9.16667C7.14162 38.5 5.5 36.8584 5.5 34.8333V9.16667C5.5 7.14162 7.14162 5.5 9.16667 5.5ZM20.1667 16.5C20.1667 18.525 18.525 20.1667 16.5 20.1667C14.475 20.1667 12.8333 18.525 12.8333 16.5C12.8333 14.475 14.475 12.8333 16.5 12.8333C18.525 12.8333 20.1667 14.475 20.1667 16.5Z" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Photoshop</p>
+      </div>
+
+      <div class="skill" data-percent="85">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M32.9985 23.8319L30.4777 11.2295C30.4091 10.8867 30.244 10.5706 30.0016 10.3185C29.7593 10.0664 29.4499 9.8889 29.11 9.80688L5.92938 3.71654C5.624 3.64271 5.30476 3.64859 5.00231 3.73363C4.69986 3.81867 4.42433 3.98001 4.20217 4.20217C3.98001 4.42433 3.81867 4.69986 3.73363 5.00231C3.64859 5.30476 3.64271 5.624 3.71654 5.92938L9.80688 29.11C9.8889 29.4499 10.0664 29.7593 10.3185 30.0016C10.5706 30.244 10.8867 30.4091 11.2295 30.4777L23.8319 32.9985M4.21484 4.21484L17.5725 17.5725M28.7944 39.0354C28.4506 39.3791 27.9844 39.5722 27.4983 39.5722C27.0121 39.5722 26.5459 39.3791 26.2021 39.0354L23.2944 36.1278C22.9507 35.784 22.7576 35.3177 22.7576 34.8316C22.7576 34.3455 22.9507 33.8792 23.2944 33.5354L33.5354 23.2944C33.8792 22.9507 34.3455 22.7576 34.8316 22.7576C35.3177 22.7576 35.784 22.9507 36.1278 23.2944L39.0354 26.2021C39.3791 26.5459 39.5722 27.0121 39.5722 27.4983C39.5722 27.9844 39.3791 28.4506 39.0354 28.7944L28.7944 39.0354ZM23.8319 20.1652C23.8319 22.1902 22.1902 23.8319 20.1652 23.8319C18.1402 23.8319 16.4985 22.1902 16.4985 20.1652C16.4985 18.1402 18.1402 16.4985 20.1652 16.4985C22.1902 16.4985 23.8319 18.1402 23.8319 20.1652Z" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Illustrator</p>
+      </div>
+
+      <div class="skill" data-percent="70">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M6.35417 25.3863C6.64798 25.5708 6.98809 25.6681 7.33498 25.6669H20.1669C20.4634 25.6659 20.7557 25.7369 21.0188 25.8738C21.2818 26.0106 21.5078 26.2093 21.6772 26.4527C21.8466 26.696 21.9545 26.9769 21.9916 27.2711C22.0287 27.5654 21.9938 27.8642 21.89 28.142L18.3704 39.1794C18.3153 39.3798 18.3299 39.5931 18.412 39.7842C18.494 39.9753 18.6385 40.1328 18.8219 40.2308C19.0052 40.3289 19.2164 40.3617 19.4208 40.3239C19.6253 40.2861 19.8108 40.1799 19.9469 40.0227L38.0949 21.3216C38.3134 21.0522 38.451 20.7263 38.4917 20.3817C38.5324 20.0371 38.4746 19.6881 38.3248 19.3751C38.1751 19.0622 37.9396 18.7981 37.6458 18.6137C37.352 18.4292 37.0119 18.3319 36.665 18.3331H23.8331C23.5366 18.3341 23.2443 18.2631 22.9812 18.1262C22.7182 17.9894 22.4922 17.7907 22.3228 17.5474C22.1534 17.304 22.0455 17.0231 22.0084 16.7289C21.9714 16.4346 22.0062 16.1358 22.11 15.858L25.6296 4.82064C25.6847 4.62015 25.6701 4.40687 25.588 4.21581C25.506 4.02474 25.3615 3.86725 25.1781 3.76917C24.9948 3.6711 24.7836 3.63827 24.5792 3.67609C24.3747 3.7139 24.1892 3.8201 24.0531 3.97726L5.90514 22.6784C5.68659 22.9478 5.54897 23.2737 5.50827 23.6183C5.46756 23.9629 5.52544 24.3119 5.67517 24.6249C5.82491 24.9378 6.06036 25.2019 6.35417 25.3863Z" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Adobe Express</p>
+      </div>
+
+      <div class="skill" data-percent="78">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M22 29.3319V42.1652L9.1652 29.3319V16.4985H34.8348V3.6652H9.1652L34.8348 29.3319H22ZM9.1652 29.3319H22" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Framer</p>
+      </div>
+
+      <div class="skill" data-percent="70">
+        <p class="skill-percent" data-count>0%</p>
+        <div class="skill-badge">
+          <svg class="ring" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="50" />
+            <circle class="ring-fill" cx="55" cy="55" r="50" />
+          </svg>
+          <span class="skill-icon">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M5.5 16.5H38.5M16.5 38.5V16.5M9.16667 5.5H34.8333C36.8584 5.5 38.5 7.14162 38.5 9.16667V34.8333C38.5 36.8584 36.8584 38.5 34.8333 38.5H9.16667C7.14162 38.5 5.5 36.8584 5.5 34.8333V9.16667C5.5 7.14162 7.14162 5.5 9.16667 5.5Z" /></svg>
+          </span>
+        </div>
+        <p class="skill-name">Webflow</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" class="work">
+    <div class="section-head reveal">
+      <h2>SELECTED WORK</h2>
+      <span class="section-index">01 — 04</span>
+    </div>
+
+    <div class="work-grid reveal-stagger">
+
+      <article class="project-card" style="--tint:#3b82f6">
+        <a class="project-thumb has-image" href="case-studies/culinarycart-case-study/index.html" aria-label="View Culinary Cart project">
+          <picture>
+            <source srcset="images/culinary-cart-thumb.webp" type="image/webp" />
+            <img src="images/culinary-cart-thumb.jpg" alt="Culinary Cart app screens — recipe discovery, browsing, and step-by-step cooking instructions" loading="lazy" />
+          </picture>
+          <span class="thumb-scrim" aria-hidden="true"></span>
+          <span class="project-number">01</span>
+          <span class="view-pill">VIEW PROJECT
+            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+          </span>
+        </a>
+        <div class="project-meta">
+          <div>
+            <h3 class="project-title">Culinary Cart</h3>
+            <p class="project-intro">Making cooking more accessible and enjoyable</p>
+          </div>
+          <span class="project-year">2024</span>
+        </div>
+      </article>
+
+      <article class="project-card" style="--tint:#10b981">
+        <a class="project-thumb has-image" href="case-studies/maslow-case-study/index.html" aria-label="View Maslow project">
+          <picture>
+            <source srcset="images/maslow-thumb.webp" type="image/webp" />
+            <img src="images/maslow-thumb.jpg" alt="Maslow app screens — event discovery map and charity sign-up flow" loading="lazy" />
+          </picture>
+          <span class="thumb-scrim" aria-hidden="true"></span>
+          <span class="project-number">02</span>
+          <span class="view-pill">VIEW PROJECT
+            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+          </span>
+        </a>
+        <div class="project-meta">
+          <div>
+            <h3 class="project-title">Maslow</h3>
+            <p class="project-intro">Charity events around you</p>
+          </div>
+          <span class="project-year">2023</span>
+        </div>
+      </article>
+
+      <article class="project-card" style="--tint:#a855f7">
+        <a class="project-thumb has-image" href="case-studies/your-credit-case-study/index.html" aria-label="View Your.Credit project">
+          <picture>
+            <source srcset="images/your-credit-thumb.webp" type="image/webp" />
+            <img src="images/your-credit-thumb.jpg" alt="Your.Credit dashboard on desktop and mobile — credit score and account overview" loading="lazy" />
+          </picture>
+          <span class="thumb-scrim" aria-hidden="true"></span>
+          <span class="project-number">03</span>
+          <span class="view-pill">VIEW PROJECT
+            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+          </span>
+        </a>
+        <div class="project-meta">
+          <div>
+            <h3 class="project-title">Your.Credit</h3>
+            <p class="project-intro">Credit management, mobile + web</p>
+          </div>
+          <span class="project-year">2022</span>
+        </div>
+      </article>
+
+      <article class="project-card" style="--tint:#f59e0b">
+        <a class="project-thumb has-image" href="case-studies/velosidy-case-study/index.html" aria-label="View Velosidy project">
+          <picture>
+            <source srcset="images/velosidy-thumb.webp" type="image/webp" />
+            <img src="images/velosidy-thumb.jpg" alt="Velosidy dashboard — account details, financials, and collections workflow" loading="lazy" />
+          </picture>
+          <span class="thumb-scrim" aria-hidden="true"></span>
+          <span class="project-number">04</span>
+          <span class="view-pill">VIEW PROJECT
+            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+          </span>
+        </a>
+        <div class="project-meta">
+          <div>
+            <h3 class="project-title">Velosidy</h3>
+            <p class="project-intro">Account management for debt collection teams</p>
+          </div>
+          <span class="project-year">2025</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <h2>LET'S BUILD<span class="dot">.</span></h2>
+        <p>Have a project in mind? Reach out and let's create something extraordinary together.</p>
+      </div>
+
+      <div class="contact-links reveal-stagger">
+        <a class="contact-link" href="mailto:chirag.b007@gmail.com">
+          <span class="label">EMAIL</span>
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+        </a>
+        <a class="contact-link" href="https://www.behance.net/chiragbhavsar007" target="_blank" rel="noopener">
+          <span class="label">BEHANCE</span>
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/chirag-bhavsar-cb07/" target="_blank" rel="noopener">
+          <span class="label">LINKEDIN</span>
+          <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round"><path d="M25 25V1H1M25 1L1 25" /></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-row">
+      <p>&copy; <span id="year"></span> CHIRAG BHAVSAR</p>
+      <p>BUILT WITH PASSION</p>
+    </div>
+  </section>
+
+</main>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

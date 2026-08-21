@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CulinaryCart — UX Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450;1,9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>CulinaryCart</div>
+    <ul>
+      <li><a href="#ingredients">The Problem</a></li>
+      <li><a href="#audience">Audience</a></li>
+      <li><a href="#persona">Persona</a></li>
+      <li><a href="#method">Structure</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+      <li><a href="../../index.html#work" class="back-link">&larr; Back to Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">UX Case Study — Mobile App</div>
+      <h1>A recipe for<br>effortless <em>cooking</em>.</h1>
+      <p class="sub">CulinaryCart is a mobile-first app designed to make cooking more accessible and enjoyable — helping users explore recipes, convert ingredients into shopping lists, shop via integrated platforms, and share their culinary experiences.</p>
+      <div class="meta-card">
+        <div><span>Role</span><p>UI/UX Design &amp; Prototyping</p></div>
+        <div><span>Platform</span><p>iOS &amp; Android, mobile-first</p></div>
+        <div><span>Tools</span><p>Figma</p></div>
+        <div><span>Focus</span><p>Discover → Shop → Share</p></div>
+      </div>
+    </div>
+    <div class="hero-devices">
+      <div class="device d1"><img src="images/screen-home.png" alt="CulinaryCart home screen"></div>
+      <div class="device d2"><img src="images/hero-splash.png" alt="CulinaryCart splash screen"></div>
+    </div>
+  </div>
+</header>
+
+<section id="ingredients">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Step 01 — Ingredients</div>
+      <h2>Every dish starts with a problem worth solving.</h2>
+    </div>
+    <div class="split-cards">
+      <div class="card reveal">
+        <h3 class="tag-problem">The Spark — The Problem</h3>
+        <p class="lede">Cooking a new dish should be exciting — not frustrating. But users often juggle between recipe blogs, grocery apps, and handwritten notes just to cook one dish.</p>
+        <ul>
+          <li>Switching between apps to copy ingredients</li>
+          <li>No direct mapping between recipes and grocery items</li>
+          <li>Confusion with quantities, brands, or availability</li>
+          <li>Time-consuming switch between recipe and shopping apps</li>
+          <li>No link between recipe ingredients and shoppable items</li>
+          <li>Ambiguity around ingredient quantities or preferred brands</li>
+          <li>Lack of community features like feedback or sharing</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="tag-solution">The Vision — The Solution</h3>
+        <p class="lede">CulinaryCart was envisioned as a unified platform that brings together recipe discovery, ingredient planning, grocery shopping, and social sharing.</p>
+        <ul>
+          <li>Provide easy access to diverse recipes</li>
+          <li>Allow ingredient-to-cart conversion in one tap</li>
+          <li>Enable sharing and rating of cooking experiences</li>
+          <li>Empower users to explore recipes by preference, cuisine, or occasion</li>
+          <li>Auto-generate ingredient lists, mapped to real grocery products</li>
+          <li>Enable quick cart exports to platforms like Amazon Fresh</li>
+          <li>Let users rate, save, and contribute their own recipes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="audience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Step 02 — Who's Cooking</div>
+      <h2>Designed for a table full of different appetites.</h2>
+      <p>CulinaryCart is designed for a broad range of users, each with their own culinary goals — from efficiency to expression.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="persona-chip reveal">
+        <div class="avatar"><img src="images/avatar-rita.png" alt="Rita"></div>
+        <h4>Rita, 35 — working mom</h4>
+        <p>Needs healthy, family-friendly meals she can plan and shop for quickly.</p>
+      </div>
+      <div class="persona-chip reveal">
+        <div class="avatar"><img src="images/avatar-ankit.png" alt="Ankit"></div>
+        <h4>Ankit, 29 — bachelor</h4>
+        <p>Enjoys experimenting with trending recipes, often cooks for friends.</p>
+      </div>
+      <div class="persona-chip reveal">
+        <div class="avatar"><img src="images/avatar-sneha.png" alt="Sneha"></div>
+        <h4>Sneha, 42 — food blogger</h4>
+        <p>Wants to showcase her recipes, build a community, and get feedback.</p>
+      </div>
+      <div class="persona-chip reveal">
+        <div class="avatar"><img src="images/avatar-students.png" alt="Students and beginners"></div>
+        <h4>Students &amp; beginners</h4>
+        <p>Need step-by-step recipes and guidance with ingredient availability.</p>
+      </div>
+    </div>
+    <p class="audience-note reveal">"The app aims to reduce effort, boost creativity, and build community around cooking."</p>
+  </div>
+</section>
+
+<section id="persona">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Step 03 — The Main Course</div>
+      <h2>Meet Keshvi, our primary persona.</h2>
+      <p>Keshvi recently moved to Pune for a new job and lives independently. She has a keen interest in clean eating and enjoys cooking as a way to relax after work. Between long work hours and weekend meetups with friends, she looks for convenience without compromising on quality.</p>
+    </div>
+    <div class="persona-wrap reveal">
+      <div class="persona-portrait">
+        <img src="images/persona-keshvi.png" alt="Keshvi Prabhakar portrait">
+        <div class="persona-info">
+          <p><b>Name:</b> Keshvi Prabhakar</p>
+          <p><b>Age:</b> 27</p>
+          <p><b>Occupation:</b> Marketing Specialist</p>
+          <p><b>Location:</b> Pune, India</p>
+        </div>
+      </div>
+      <div class="quad-grid">
+        <div class="quad">
+          <h4>Goals</h4>
+          <ul>
+            <li>Cook quick, nutritious meals at home</li>
+            <li>Explore healthy recipes based on dietary tags (low-carb, high-protein)</li>
+            <li>Avoid the hassle of multiple apps for recipe and grocery needs</li>
+          </ul>
+        </div>
+        <div class="quad">
+          <h4>Behaviors</h4>
+          <ul>
+            <li>Shops online from Amazon Fresh or Blinkit once a week</li>
+            <li>Saves recipes from Instagram or Pinterest but rarely gets back to them</li>
+            <li>Frequently looks for alternatives to high-sodium or processed ingredients</li>
+          </ul>
+        </div>
+        <div class="quad">
+          <h4>Pain Points</h4>
+          <ul>
+            <li>Doesn't always find accurate or clean ingredient suggestions in recipe apps</li>
+            <li>Finds switching between recipe and shopping apps time-consuming</li>
+            <li>Prefers visual step-by-step instructions but most platforms offer text-heavy pages</li>
+          </ul>
+        </div>
+        <div class="quad">
+          <h4>Preferences</h4>
+          <ul>
+            <li>Clean, image-led interfaces with tags and filters</li>
+            <li>Ability to substitute ingredients based on availability or nutrition</li>
+            <li>Integration with grocery delivery apps for seamless checkout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="method">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Step 04 — The Method</div>
+      <h2>Structuring the recipe: information architecture.</h2>
+      <p>The flows were mapped so recipe discovery, shopping, and profile management could each stand on their own — while still connecting into one seamless checkout journey.</p>
+    </div>
+    <div class="ia-cols reveal">
+      <ul class="tree">
+        <li><span class="node">Home</span>
+          <ul>
+            <li><span class="node">Onboarding</span>
+              <ul>
+                <li><span class="node">Sign Up / Sign In</span></li>
+                <li><span class="node">Reset Password</span></li>
+              </ul>
+            </li>
+            <li><span class="node">Search Recipe</span>
+              <ul><li><span class="node">Cuisine</span></li></ul>
+            </li>
+            <li><span class="node">Recipe</span>
+              <ul>
+                <li><span class="node">Recipe Details</span>
+                  <ul>
+                    <li><span class="node">Make Shopping List</span>
+                      <ul>
+                        <li><span class="node">Checkout</span>
+                          <ul><li><span class="node">Confirm Payment</span></li></ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="tree">
+        <li><span class="node">Profile</span>
+          <ul>
+            <li><span class="node">My Recipes</span></li>
+            <li><span class="node">Favorite</span></li>
+            <li><span class="node">Cart</span></li>
+            <li><span class="node">Personal Info</span></li>
+            <li><span class="node">Notifications</span></li>
+            <li><span class="node">Payment Method</span></li>
+            <li><span class="node">Address</span></li>
+            <li><span class="node">Info Message</span></li>
+            <li><span class="node">Other Links</span>
+              <ul>
+                <li><span class="node">About Us</span></li>
+                <li><span class="node">FAQs</span></li>
+                <li><span class="node">Contact</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Step 05 — Plated</div>
+      <h2>Key features, ready to serve.</h2>
+    </div>
+    <div class="feature-list reveal">
+      <div class="feature"><span class="num">01</span><div><h4>Recipe Discovery</h4><p>Smart filters (cuisine, prep time, diet) and search.</p></div></div>
+      <div class="feature"><span class="num">02</span><div><h4>Visual Recipe Page</h4><p>Clear instructions with ingredients &amp; an auto-generated shopping list.</p></div></div>
+      <div class="feature"><span class="num">03</span><div><h4>Smart Cart</h4><p>Export the list to Amazon Fresh, BigBasket, and more.</p></div></div>
+      <div class="feature"><span class="num">04</span><div><h4>Brand Suggestions</h4><p>Auto-selects available brands — fully customizable.</p></div></div>
+      <div class="feature"><span class="num">05</span><div><h4>Interactive Community</h4><p>Like, rate, comment, and upload recipes.</p></div></div>
+    </div>
+
+    <div class="screens-grid reveal">
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-home.png" alt="Home screen"></div>
+        <div class="cap">Home</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-login.png" alt="Farm Fresh login screen"></div>
+        <div class="cap">Onboarding / Login</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-register.png" alt="Register screen"></div>
+        <div class="cap">Register</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-search.png" alt="Search screen"></div>
+        <div class="cap">Search</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-recipe.png" alt="Recipe detail screen"></div>
+        <div class="cap">Recipe Detail</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-recipe-ingredients.png" alt="Recipe ingredients screen"></div>
+        <div class="cap">Ingredients</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-my-recipes.png" alt="My recipes screen"></div>
+        <div class="cap">My Recipes</div>
+      </div>
+      <div class="screen-item">
+        <div class="screen-frame"><img src="images/screen-cart.png" alt="Cart screen"></div>
+        <div class="cap">View Cart</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="reflection">
+  <div class="wrap final-wrap">
+    <div class="reveal">
+      <div class="eyebrow">Final Course — Reflection</div>
+      <h2 style="color:#fff;">Final thoughts.</h2>
+      <p>CulinaryCart reimagines the everyday cooking experience by connecting discovery with execution — in one intuitive platform. From uncovering the perfect recipe to sourcing ingredients and sharing the joy, every step was designed with empathy and ease in mind.</p>
+      <p>While this concept is still in the design phase, it has laid the groundwork for a unified culinary journey that balances user delight, utility, and innovation. This project was not just about building an app — it was about understanding habits, solving everyday frictions, and designing a seamless food experience people can truly enjoy.</p>
+    </div>
+    <div class="reveal">
+      <div class="device-final device-frame-final">
+        <img src="images/hero-splash.png" alt="CulinaryCart splash screen">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand" style="justify-content:center;"><span class="dot"></span>CulinaryCart</div>
+  <p>A UX case study by Chirag — designed in Figma.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

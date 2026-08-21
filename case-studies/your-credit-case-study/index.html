@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>your.credit — UX Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/logo.png" alt="your.credit logo">
+    </div>
+    <div class="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#research">Research</a>
+      <a href="#process">Process</a>
+      <a href="#solution">Solution</a>
+      <a href="#reflection">Reflection</a>
+      <a href="../../index.html#work" class="back-link">&larr; Back to Portfolio</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">UX Case Study — Credit Repair Platform</div>
+    <h1>Designing <em>trust</em> into a confusing credit report</h1>
+    <p class="lede">End-to-end product design for your.credit — a consumer platform that turns opaque credit reporting into something people can actually read, question, and fix.</p>
+
+    <div class="meta-row">
+      <div class="item"><div class="label">Role</div><div class="value">Senior UI/UX Designer</div></div>
+      <div class="item"><div class="label">Tools</div><div class="value">Figma, FigJam</div></div>
+      <div class="item"><div class="label">Scope</div><div class="value">30+ screens</div></div>
+      <div class="item"><div class="label">Platform</div><div class="value">Web, responsive</div></div>
+    </div>
+
+    <div class="hero-shot reveal">
+      <img class="hero-laptop" src="assets/laptop-hero.png" alt="your.credit landing page shown on a laptop screen">
+    </div>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow" style="margin-bottom:16px;">Overview</span>
+        <h2>A credit platform people can actually trust</h2>
+      </div>
+      <div>
+        <p class="prose">your.credit is a global information and insights company offering credit reporting, risk management, and fraud prevention services. It helps businesses make informed decisions — and helps consumers access the financial products they need with confidence.</p>
+        <p class="prose">As UI/UX designer, I contributed across the full product development cycle — understanding user needs, defining user flows, building wireframes and prototypes, designing the interface, running usability testing, and iterating from feedback. In total: a <strong>30+ screen</strong> system covering onboarding, the credit dashboard, full report breakdown, account drill-downs, and the dispute flow.</p>
+      </div>
+    </div>
+
+    <div class="stat-strip">
+      <div><div class="num">30+</div><div class="lbl">Screens designed, onboarding to dispute resolution</div></div>
+      <div><div class="num">5</div><div class="lbl">Stage design process — discover through test</div></div>
+      <div><div class="num">2</div><div class="lbl">Core personas anchoring every decision</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="sec-num">01 / Background</span>
+        <h2>Client &amp; company</h2>
+      </div>
+      <div>
+        <p class="prose">your.credit is a credit repair and reporting company dedicated to helping people improve their scores and financial standing. Services span credit report analysis, dispute resolution, and personalized improvement plans.</p>
+        <p class="prose">The audience splits into two groups with one shared need: <strong>young adults building credit for the first time</strong>, and <strong>financially engaged consumers actively repairing theirs</strong>. In a heavily regulated space, the product also had to feel transparent and compliant at every step — not just legally, but visibly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="two-col problem-col">
+      <figure class="problem-visual reveal">
+        <div class="report-card">
+          <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sample credit report showing a poor credit score of 520 with derogatory marks">
+            <rect x="1" y="1" width="298" height="418" rx="14" fill="#FFFFFF" stroke="#DCE5E0" stroke-width="1.5"/>
+
+            <text x="24" y="42" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="21" letter-spacing="0.5" fill="#0B1F2A">CREDIT REPORT</text>
+            <rect x="24" y="50" width="180" height="2" fill="#0B1F2A"/>
+
+            <text x="24" y="78" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="15" fill="#16232B">Jane Doe</text>
+
+            <rect x="150" y="62" width="126" height="66" rx="10" fill="#FDEEEE" stroke="#D64545" stroke-width="1.5"/>
+            <text x="213" y="79" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8A3B3B">CREDIT SCORE</text>
+            <text x="213" y="106" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" fill="#D64545">520</text>
+            <text x="213" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#D64545">Poor</text>
+
+            <!-- score range bar -->
+            <g font-family="IBM Plex Mono, monospace">
+              <rect x="24" y="150" width="58" height="8" rx="4" fill="#D64545"/>
+              <rect x="86" y="150" width="58" height="8" rx="4" fill="#E0A93A"/>
+              <rect x="148" y="150" width="58" height="8" rx="4" fill="#8FCB9B"/>
+              <rect x="210" y="150" width="58" height="8" rx="4" fill="#1FAE64"/>
+              <polygon points="53,140 47,148 59,148" fill="#0B1F2A"/>
+              <text x="24" y="132" font-size="9" fill="#0B1F2A" font-weight="600">Poor</text>
+              <text x="86" y="132" font-size="9" fill="#8A6A2A">Fair</text>
+              <text x="148" y="132" font-size="9" fill="#3E7A4C">Good</text>
+              <text x="210" y="132" font-size="9" fill="#0E7A46">Excellent</text>
+              <text x="24" y="171" font-size="8.5" fill="#8B9A94">300-579</text>
+              <text x="86" y="171" font-size="8.5" fill="#8B9A94">580-669</text>
+              <text x="148" y="171" font-size="8.5" fill="#8B9A94">670-739</text>
+              <text x="210" y="171" font-size="8.5" fill="#8B9A94">740-850</text>
+            </g>
+
+            <line x1="24" y1="192" x2="276" y2="192" stroke="#EBEFED" stroke-width="1.5"/>
+
+            <g font-family="IBM Plex Mono, monospace">
+              <text x="24" y="214" font-size="9" fill="#8B9A94">DATE ISSUED</text>
+              <text x="24" y="232" font-size="12" fill="#16232B" font-weight="600">April 18, 2024</text>
+              <text x="160" y="214" font-size="9" fill="#8B9A94">ACCOUNTS IN COLLECTION</text>
+              <text x="160" y="232" font-size="12" fill="#D64545" font-weight="600">4</text>
+            </g>
+
+            <line x1="24" y1="252" x2="276" y2="252" stroke="#EBEFED" stroke-width="1.5"/>
+
+            <g font-family="IBM Plex Mono, monospace">
+              <text x="24" y="274" font-size="9" fill="#8B9A94">LATE PAYMENTS</text>
+              <text x="24" y="292" font-size="12" fill="#D64545" font-weight="600">2</text>
+              <text x="160" y="274" font-size="9" fill="#8B9A94">DEROGATORY MARKS</text>
+              <text x="160" y="292" font-size="12" fill="#D64545" font-weight="600">2</text>
+            </g>
+
+            <line x1="24" y1="312" x2="276" y2="312" stroke="#EBEFED" stroke-width="1.5"/>
+
+            <text x="24" y="336" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#0B1F2A">Accounts</text>
+            <line x1="24" y1="354" x2="276" y2="354" stroke="#EBEFED" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <line x1="24" y1="374" x2="276" y2="374" stroke="#EBEFED" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <line x1="24" y1="394" x2="276" y2="394" stroke="#EBEFED" stroke-width="1.5" stroke-dasharray="3 4"/>
+          </svg>
+
+          <div class="flag-callout">
+            <span class="flag-dot"></span>
+            <span>Unrecognized collection — flagged for dispute</span>
+          </div>
+        </div>
+        <figcaption>A typical credit report — dense, technical, and easy to misread</figcaption>
+      </figure>
+
+      <div>
+        <span class="sec-num">02 / Problem</span>
+        <h2>The report is right there. Nobody can read it.</h2>
+        <p class="prose" style="margin-top:20px;">Inaccurate credit reporting has real financial consequences — worse mortgage terms, higher borrowing costs, declined loans. Yet the process of catching and disputing those errors is slow, jargon-heavy, and intimidating for most people.</p>
+        <p class="prose">The opportunity: give users a clear, honest view of their credit health, let them flag inaccuracies early, and walk them through disputing errors without needing to understand how the bureaus work behind the scenes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03 / Research &amp; Discovery</span>
+      <h2>Understanding why people avoid dealing with their credit</h2>
+    </div>
+
+    <div class="two-col">
+      <div class="prose">
+        Research combined <strong>user interviews</strong> to surface real emotional and practical pain points, <strong>market analysis</strong> to track regulatory trends, and <strong>competitor analysis</strong> across established credit repair platforms — comparing pricing, feature depth, and overall customer experience.
+      </div>
+      <div class="prose">
+        Findings pointed to one consistent theme: transparency and personalization are the biggest trust signals in this category. Generic advice — or silence during a dispute — erodes confidence fast. Users wanted technology-led efficiency over slow, manual service.
+      </div>
+    </div>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-top">
+          <div class="avatar">SS</div>
+          <div>
+            <div class="persona-name">Sarah Scott</div>
+            <div class="persona-tag">Event Manager · 30 · New York</div>
+          </div>
+        </div>
+        <p class="prose" style="margin:0;">Wants to improve her credit score ahead of a mortgage application next year, and needs a service tailored to her specific financial situation.</p>
+        <h4>Goals</h4>
+        <ul>
+          <li>Qualify for a mortgage with a better rate</li>
+          <li>A friendly platform with a personalized plan</li>
+          <li>Full transparency into dispute progress</li>
+        </ul>
+        <h4>Frustrations</h4>
+        <ul>
+          <li>Overwhelmed navigating credit repair alone</li>
+          <li>Poor communication from previous services</li>
+          <li>Worried about hidden fees</li>
+        </ul>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-top">
+          <div class="avatar">JW</div>
+          <div>
+            <div class="persona-name">John William</div>
+            <div class="persona-tag">Civil Engineer · 32 · New Jersey</div>
+          </div>
+        </div>
+        <p class="prose" style="margin:0;">Wants inaccuracies removed from his report to qualify for a car loan at a lower interest rate, with minimal back-and-forth.</p>
+        <h4>Goals</h4>
+        <ul>
+          <li>A fast, efficient dispute service</li>
+          <li>Track progress without chasing anyone</li>
+          <li>Direct, easy communication with experts</li>
+        </ul>
+        <h4>Frustrations</h4>
+        <ul>
+          <li>Time-consuming disputes with earlier providers</li>
+          <li>Skeptical after past attempts made no difference</li>
+          <li>Worried about disreputable repair companies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04 / Design Process</span>
+      <h2>Five stages, always checked back against Sarah and John</h2>
+    </div>
+    <div class="process-row">
+      <div class="process-step"><span class="n">01</span><div class="t">Discover</div><div class="d">Interviews, market &amp; competitor research</div></div>
+      <div class="process-step"><span class="n">02</span><div class="t">Define</div><div class="d">Personas, problem framing, success criteria</div></div>
+      <div class="process-step"><span class="n">03</span><div class="t">Ideate</div><div class="d">Flows, IA, low-fidelity concepts</div></div>
+      <div class="process-step"><span class="n">04</span><div class="t">Design</div><div class="d">High-fidelity UI &amp; design system in Figma</div></div>
+      <div class="process-step"><span class="n">05</span><div class="t">Test</div><div class="d">Validation against persona goals</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="solution" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">05 / Final Design &amp; Solution</span>
+      <h2>From dashboard to a resolved dispute</h2>
+      <span class="sub">Four key screens from the 30+ screen system — click any to view full size.</span>
+    </div>
+
+    <div class="gallery-grid">
+
+      <button class="gallery-item reveal" data-index="0">
+        <div class="gallery-thumb">
+          <img src="assets/dashboard-desktop.jpg" alt="Dashboard desktop with disputes, accounts and credit score">
+          <span class="zoom-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 8v6M8 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="gallery-info">
+          <div class="screen-tag">01 — Dashboard</div>
+          <div class="gallery-title">Everything that matters, at a glance</div>
+        </div>
+      </button>
+
+      <button class="gallery-item reveal" data-index="1">
+        <div class="gallery-thumb">
+          <img src="assets/credit-report.jpg" alt="Full credit report with score gauge and collapsible sections">
+          <span class="zoom-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 8v6M8 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="gallery-info">
+          <div class="screen-tag">02 — Credit Report</div>
+          <div class="gallery-title">The full report, made legible</div>
+        </div>
+      </button>
+
+      <button class="gallery-item reveal" data-index="2">
+        <div class="gallery-thumb">
+          <img src="assets/account-details-report-pull.jpg" alt="Account details with payment history and pull latest report CTA">
+          <span class="zoom-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 8v6M8 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="gallery-info">
+          <div class="screen-tag">03 — Account Details</div>
+          <div class="gallery-title">Drill into a single account</div>
+        </div>
+      </button>
+
+      <button class="gallery-item reveal" data-index="3">
+        <div class="gallery-thumb">
+          <img src="assets/dispute-resolution.jpg" alt="Dispute resolution result screen">
+          <span class="zoom-badge">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 8v6M8 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="gallery-info">
+          <div class="screen-tag">04 — Dispute Resolution</div>
+          <div class="gallery-title">Showing the outcome, not just the status</div>
+        </div>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous screen">&#8249;</button>
+  <button class="lightbox-nav next" id="lightbox-next" aria-label="Next screen">&#8250;</button>
+  <div class="lightbox-body">
+    <div class="lightbox-frame">
+      <div class="browser-bar"><span></span><span></span><span></span><div class="url" id="lightbox-url">yourcredit.com/dashboard</div></div>
+      <div class="lightbox-scroll">
+        <img id="lightbox-img" src="" alt="">
+      </div>
+    </div>
+    <div class="lightbox-caption">
+      <div class="screen-tag" id="lightbox-tag">01 — Dashboard</div>
+      <div class="gallery-title" id="lightbox-title">Everything that matters, at a glance</div>
+      <div class="screen-desc" id="lightbox-desc"></div>
+    </div>
+  </div>
+</div>
+
+<section id="reflection">
+  <div class="wrap">
+    <div class="closing">
+      <span class="sec-num">06 / Reflection</span>
+      <p>Working with a credit repair agency meant every decision — copy tone, how a dispute status was surfaced, even where a reassurance note sat on the page — had to reduce anxiety, not add to it. <strong>Across 30+ screens</strong>, from the first onboarding step to ongoing dispute tracking, the goal stayed constant: make a confusing financial process legible, and give people real confidence in their own progress.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand"><img src="assets/logo.png" alt="your.credit logo"></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

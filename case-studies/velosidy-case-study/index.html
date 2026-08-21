@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payments &amp; Refunds — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap-wide">
+    <span class="brand">payments &amp; refunds — case study</span>
+    <ul>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#decisions">Decisions</a></li>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#outcome">Outcome</a></li>
+      <li><a href="../../index.html#work" class="back-link">&larr; Back to work</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Case study · payments &amp; financial operations</div>
+    <h1 class="title">Where does a payment go missing?</h1>
+    <p class="dek">Redesigning how a collections platform tracks, confirms, and reconciles money — so a charge that succeeds can never silently disappear before it's recorded.</p>
+    <div class="meta-row">
+      <div class="meta-cell"><div class="k">Role</div><div class="v">UI/UX designer</div></div>
+      <div class="meta-cell"><div class="k">Team</div><div class="v">UX manager + design</div></div>
+      <div class="meta-cell"><div class="k">Timeline</div><div class="v editable">[add dates]</div></div>
+      <div class="meta-cell"><div class="k">Tools</div><div class="v">Figma, FigJam</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="noborder">
+  <div class="wrap">
+    <div class="section-label">Context</div>
+    <p class="lede">Collection agencies handle real money on behalf of clients and consumers — payments, settlements, refunds — all of which must be tracked accurately and stay compliant with trust accounting rules. The payments module is the system agents and admins rely on to process transactions, configure payment plans, and confirm nothing falls through the cracks.</p>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-label">01 — The problem</div>
+    <h2>A payment could succeed and still never arrive.</h2>
+    <p>Before proper monitoring existed, electronic payments processed through the payment integration could silently disappear. A consumer's card would be charged successfully, but the payment sometimes never made it into the platform's records — with no real-time signal that anything had gone wrong.</p>
+    <p>Agencies only discovered the gap during month-end reconciliation. By then, invoices couldn't be closed and clients weren't paid on time.</p>
+    <p>The cause could be any of several things under the surface — asynchronous processing gaps, deadlocks, legacy code behavior, retries, or vendor event issues. Whatever the source, the effect on the agency was the same: total uncertainty.</p>
+
+    <div class="unknowns">
+      <p class="unknowns-label">What agencies couldn't answer</p>
+      <ul>
+        <li>"Did the payment really go through?"</li>
+        <li>"Why does the balance still look wrong?"</li>
+        <li>"Which team should investigate this?"</li>
+      </ul>
+    </div>
+
+    <p class="pull">"Nobody knew a payment was missing until the books didn't balance."</p>
+
+    <div class="pipeline">
+      <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#16233B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <text x="330" y="34" font-family="IBM Plex Mono" font-size="12" fill="#8C3B2E" text-anchor="middle">payments could silently vanish here (before)</text>
+        <line x1="40" y1="48" x2="660" y2="48" stroke="#8C3B2E" stroke-width="1" stroke-dasharray="4 4"/>
+        <line x1="40" y1="48" x2="40" y2="58" stroke="#8C3B2E" stroke-width="1"/>
+        <line x1="660" y1="48" x2="660" y2="58" stroke="#8C3B2E" stroke-width="1"/>
+
+        <g>
+          <rect x="40" y="80" width="180" height="70" rx="6" fill="#F1ECDF" stroke="#DAD3BE"/>
+          <text x="130" y="110" font-family="Inter" font-weight="600" font-size="14" fill="#16233B" text-anchor="middle">Consumer payment</text>
+          <text x="130" y="130" font-family="Inter" font-size="12" fill="#3B4A63" text-anchor="middle">Card charged by processor</text>
+        </g>
+        <line x1="220" y1="115" x2="255" y2="115" stroke="#16233B" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+        <g>
+          <rect x="257" y="80" width="180" height="70" rx="6" fill="#F1ECDF" stroke="#DAD3BE"/>
+          <text x="347" y="110" font-family="Inter" font-weight="600" font-size="14" fill="#16233B" text-anchor="middle">Internal processing</text>
+          <text x="347" y="130" font-family="Inter" font-size="12" fill="#3B4A63" text-anchor="middle">Payment API layer</text>
+        </g>
+        <line x1="437" y1="115" x2="472" y2="115" stroke="#16233B" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+        <g>
+          <rect x="474" y="80" width="180" height="70" rx="6" fill="#F1ECDF" stroke="#DAD3BE"/>
+          <text x="564" y="110" font-family="Inter" font-weight="600" font-size="14" fill="#16233B" text-anchor="middle">Macro account</text>
+          <text x="564" y="130" font-family="Inter" font-size="12" fill="#3B4A63" text-anchor="middle">Trust / operating ledger</text>
+        </g>
+        <line x1="654" y1="115" x2="689" y2="115" stroke="#16233B" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+        <g>
+          <rect x="691" y="80" width="170" height="70" rx="6" fill="#16233B" stroke="#16233B"/>
+          <text x="776" y="110" font-family="Inter" font-weight="600" font-size="14" fill="#FBF9F4" text-anchor="middle">Platform record</text>
+          <text x="776" y="130" font-family="Inter" font-size="12" fill="#E9E2D0" text-anchor="middle">Agent-visible balance</text>
+        </g>
+
+        <line x1="130" y1="150" x2="330" y2="210" stroke="#DAD3BE" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="347" y1="150" x2="380" y2="210" stroke="#DAD3BE" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="564" y1="150" x2="480" y2="210" stroke="#DAD3BE" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="776" y1="150" x2="560" y2="210" stroke="#DAD3BE" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <g>
+          <rect x="290" y="212" width="280" height="60" rx="6" fill="#2F6F62"/>
+          <text x="430" y="238" font-family="Inter" font-weight="600" font-size="14" fill="#FBF9F4" text-anchor="middle">Payment monitoring report</text>
+          <text x="430" y="256" font-family="Inter" font-size="12" fill="#DCEDE7" text-anchor="middle">Now visible at every stage</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="cols-2">
+      <div class="col-card problem">
+        <h3>The challenge</h3>
+        <p style="margin:0; font-size:15px;">Detection depended on one person manually checking every day. If they were out, nothing got checked — and payment data lived scattered across disconnected views with no single source of truth.</p>
+      </div>
+      <div class="col-card opportunity">
+        <h3>The opportunity</h3>
+        <p style="margin:0; font-size:15px;">Design a system where agents and agencies can trust what they see — real-time state, visible discrepancies, and compliance built into the flow itself, not assumed in the background.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="wrap">
+    <div class="section-label">02 — UX goals</div>
+    <h2>The design challenge, in one line.</h2>
+    <p class="lede">Turn silent backend failures into visible, understandable, and manageable user experiences.</p>
+    <ul class="role-list">
+      <li><span class="tag">Visibility</span><span>Make payment issues visible early, instead of discoverable only during month-end reconciliation.</span></li>
+      <li><span class="tag">Clarity</span><span>Help agents and admins understand what happened without needing deep technical knowledge.</span></li>
+      <li><span class="tag">Compliance</span><span>Support compliance-heavy payment workflows with the right disclosures and acknowledgment patterns.</span></li>
+      <li><span class="tag">Independence</span><span>Reduce operational dependency on manual checking and tribal knowledge.</span></li>
+      <li><span class="tag">Trust</span><span>Build confidence in the system through transparency, traceability, and auditability.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">03 — My role &amp; constraints</div>
+    <h2>Mixed ownership, real stakes.</h2>
+    <p>Ownership varied by phase, working closely with a UX manager on shared system patterns while owning specific pieces independently.</p>
+    <ul class="role-list">
+      <li><span class="tag">Contributed</span><span>Flow design and UI for payment arrangement configuration, payment confirmation, and account-level payment views.</span></li>
+      <li><span class="tag">Directed</span><span>Worked under the UX manager's direction on system-wide patterns and final visual language.</span></li>
+      <li><span class="tag">Owned</span><span>Iteration on specific screens after stakeholder and compliance feedback — particularly the confirmation and disclosure flow.</span></li>
+      <li><span class="tag">Designed for</span><span>Multiple user groups at once — collections agents, agency admins, financial admins, and internal platform teams — balancing day-to-day simplicity with enough detail for investigation and escalation.</span></li>
+      <li><span class="tag">Constraint</span><span>Trust vs. operating account handling is regulated — errors carry real compliance consequences, not just UX friction.</span></li>
+      <li><span class="tag">Constraint</span><span>The system integrates with a third-party payment processor, so failure states could originate outside the platform's own code.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-label">04 — Process</div>
+    <h2>Designing for visibility over assumption.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <h4>Discovery</h4>
+        <p>The problem surfaced through a real incident — payments succeeding on the processor side but not reliably reflecting in the platform.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h4>Mapping failure points</h4>
+        <p>Traced exactly where a payment could go missing — processor level, internal API, or account level — so alerting could point at where, not just that.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h4>Designing for visibility</h4>
+        <p>Flipped the default from silent success to explicit status, discrepancies, and confirmations agents don't have to take on faith.</p>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <h4>Iteration</h4>
+        <p>The confirmation flow went through multiple passes to properly separate mandatory and agency-specific disclosures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="decisions">
+  <div class="wrap">
+    <div class="section-label">05 — Key decisions</div>
+    <h2>What changed, and why.</h2>
+    
+    <article class="decision">
+      <div class="stamp">01</div>
+      <div class="decision-body">
+        <h3>Real-time balance sync across both portals</h3>
+        <dl>
+          <dt>Considered</dt><dd>Leaving balance updates as an async, best-effort refresh — the existing pattern.</dd>
+          <dt>Chose</dt><dd>Redesigned the flow so balances refresh in under 3 seconds on both the consumer portal and the agent screen when a payment processes.</dd>
+          <dt>Because</dt><dd>Agents were operating on stale information with no way to confirm a payment “actually went through” without checking elsewhere.</dd>
+        </dl>
+      </div>
+    </article>
+    
+    <article class="decision">
+      <div class="stamp">02</div>
+      <div class="decision-body">
+        <h3>Payment monitoring report — visible discrepancies, not silent failures</h3>
+        <dl>
+          <dt>Considered</dt><dd>Keeping detection as a manual, person-dependent daily check.</dd>
+          <dt>Chose</dt><dd>A tenant-aware report in the agent/admin UI surfacing suspected missing or incomplete payments — grouped by trust account, filterable by date, with amount and transaction ID. Structured so users can narrow by date range and see whether an issue traces to source event intake, internal posting, or downstream account updates.</dd>
+          <dt>Because</dt><dd>A single point of failure — one person, one daily check — was not an acceptable safety net for something with real financial and compliance impact. A report alone isn't useful unless people know what to do with it.</dd>
+        </dl>
+      </div>
+    </article>
+    
+    <article class="decision">
+      <div class="stamp">03</div>
+      <div class="decision-body">
+        <h3>Configurable confirmation with layered compliance disclosures</h3>
+        <dl>
+          <dt>Considered</dt><dd>A single generic confirmation step, or leaving disclosure content optional per agency.</dd>
+          <dt>Chose</dt><dd>A structured confirmation screen showing the platform's mandatory disclosure alongside agency-specific disclosures, with required acknowledgment blocking submission.</dd>
+          <dt>Because</dt><dd>Compliance couldn't be trusted to happen — it needed to be enforced at the UI level so a payment literally cannot submit without proper consent.</dd>
+        </dl>
+      </div>
+    </article>
+    
+    <article class="decision">
+      <div class="stamp">04</div>
+      <div class="decision-body">
+        <h3>Dual alerting UX — agency and platform team</h3>
+        <dl>
+          <dt>Considered</dt><dd>Keeping single-channel, single-recipient alerting, or none at all.</dd>
+          <dt>Chose</dt><dd>Configurable email alerts agencies can set to “only when issues are detected” or “daily summary regardless,” with the platform team always alerted per tenant — and alert content naming where in the pipeline the failure occurred.</dd>
+          <dt>Because</dt><dd>Detection needed to survive any one person's availability, and be specific enough that triage didn't require digging through systems to find the failure point.</dd>
+        </dl>
+      </div>
+    </article>
+    
+    <article class="decision">
+      <div class="stamp">05</div>
+      <div class="decision-body">
+        <h3>Unified payment activity trail</h3>
+        <dl>
+          <dt>Considered</dt><dd>Leaving payment data — completed, scheduled, arrangements, settlements — distributed across separate views, as it had been.</dd>
+          <dt>Chose</dt><dd>Consolidated all payment events into activity history and financial transactions within a single account view.</dd>
+          <dt>Because</dt><dd>Agents needed one place to see exactly what happened, when, and which trust account it landed in — without knowing which disconnected system held which piece.</dd>
+        </dl>
+      </div>
+    </article>
+    
+    <article class="decision">
+      <div class="stamp">06</div>
+      <div class="decision-body">
+        <h3>Audit trail as part of the experience, not an afterthought</h3>
+        <dl>
+          <dt>Considered</dt><dd>Capturing only the final payment status, with no record of what was actually shown to or acknowledged by the payer.</dd>
+          <dt>Chose</dt><dd>Disclosures presented at payment time, acknowledgment status, and configuration history are captured immutably for later review.</dd>
+          <dt>Because</dt><dd>In this domain, what was shown matters as much as what was done — the audit trail needed to be designed as part of the experience so it could hold up under later investigation.</dd>
+        </dl>
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+<section id="screens" class="noborder">
+  <div class="wrap-wide">
+    <div class="section-label" style="padding: 0 24px;">06 — Final screens</div>
+    <h2 style="padding: 0 24px;">The flow, end to end.</h2>
+    <p class="carousel-hint" style="padding: 0 24px; color: var(--ink-soft);">Scroll to move through the flow — swipe on mobile.</p>
+  </div>
+</section>
+
+<section class="carousel-section" id="carousel">
+  <div class="carousel-sticky">
+    <div class="carousel-track">
+      
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/01-batch-account-view.jpg" alt="Batch account view" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 01 / 07</span>
+        <h3>Batch account view</h3>
+        <ul><li>Batch status stepper (New → Saved → Processing → Complete) keeps agents oriented within a multi-step process</li><li>Account count and total placement balance summarized up top, before any row-level detail</li><li>Per-account actions (update, delete) available inline without leaving the batch</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/02-onetime-vs-plan.jpg" alt="One-time payment vs. payment plan" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 02 / 07</span>
+        <h3>One-time payment vs. payment plan</h3>
+        <ul><li>The first decision point in the flow — kept deliberately binary</li><li>Stops an agent from building a full arrangement when they meant a single payment</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/03-payment-type.jpg" alt="Payment type selection" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 03 / 07</span>
+        <h3>Payment type selection</h3>
+        <ul><li>Partial, full, or settlement — each type changes the fields that follow</li><li>Keeps irrelevant fields hidden until a type is actually chosen</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/04-distributed-payment.jpg" alt="Payment distributed across an account set" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 04 / 07</span>
+        <h3>Payment distributed across an account set</h3>
+        <ul><li>A single payment splits automatically across every account in the set — primary, spouse, dependent</li><li>Remaining balance recalculates per account as amounts are entered</li><li>Reduces the risk of a partial or misapplied payment across a household</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/05-confirmation-disclosures.jpg" alt="Payment confirmation & disclosures" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 05 / 07</span>
+        <h3>Payment confirmation & disclosures</h3>
+        <ul><li>Mandatory platform disclosure and agency-specific disclosures shown together</li><li>Submission is blocked until the acknowledgment checkbox is checked</li><li>Directly addresses decision 3 — compliance enforced at the UI level</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/06-settlement-offer-config.jpg" alt="Settlement offer configuration" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 06 / 07</span>
+        <h3>Settlement offer configuration</h3>
+        <ul><li>Admins define offer rules — code, description, active window — plus settlement percentage and down payment terms</li><li>Multiple payment options can be layered under one offer, giving agencies flexibility without inconsistency</li></ul>
+      </div>
+    </div>
+    
+    <div class="carousel-card">
+      <div class="c-media"><img src="images/07-statement-scheduling.jpg" alt="Statement creation & scheduling" loading="lazy"></div>
+      <div class="c-copy">
+        <span class="screen-tag">Screen 07 / 07</span>
+        <h3>Statement creation & scheduling</h3>
+        <ul><li>Statements can target one client, one frequency, or all clients from a single modal</li><li>Frequency and generation schedule — day, time — are configured together, reducing missed or duplicate runs</li></ul>
+      </div>
+    </div>
+    
+    </div>
+    <div class="carousel-progress">
+      <span class="dot active" data-index="0" title="Batch account view"></span><span class="dot" data-index="1" title="One-time payment vs. payment plan"></span><span class="dot" data-index="2" title="Payment type selection"></span><span class="dot" data-index="3" title="Payment distributed across an account set"></span><span class="dot" data-index="4" title="Payment confirmation & disclosures"></span><span class="dot" data-index="5" title="Settlement offer configuration"></span><span class="dot" data-index="6" title="Statement creation & scheduling"></span>
+    </div>
+  </div>
+</section>
+
+<section id="outcome">
+  <div class="wrap">
+    <div class="section-label">07 — Outcome</div>
+    <h2>What shipped.</h2>
+    <div class="outcome-grid">
+      <div class="outcome-card">
+        <div class="idx">Delivered</div>
+        <p>End-to-end across the agent and financial experience — from agent-facing tools (accounts, tasks, queues, callbacks) to core financial operations (interest, subbalances, contingency fees, split methods, statements).</p>
+      </div>
+      <div class="outcome-card">
+        <div class="idx">Replaced</div>
+        <p>A blind, manual reconciliation process with a real-time, auditable one — visibility that previously depended on one person checking manually.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="idx">Scoped next</div>
+        <p>Payment monitoring reporting, dual alerting, sales tax handling, and further enhancements driven by client feedback are ongoing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="noborder">
+  <div class="wrap">
+    <div class="section-label">08 — Reflection</div>
+    <h2 class="reflection-h">A different kind of UX problem.</h2>
+    <div class="reflection">
+      <p>This project reshaped how I think about UX in a regulated domain — in fintech and debt collection, every decision carries real financial, legal, and operational weight. Beyond design, it demanded a working understanding of complex business rules and configurations across agencies, clients, and contracts. I contributed components to the design system and collaborated with my UX manager on shared patterns, while independently owning partner integration, statements, financial configuration, and contingency fee logic.</p>
+      <p>Good design here wasn't only about making a flow easy to use — it was about making risk visible, compliance understandable, and system behavior trustworthy. In a payments domain, edge cases aren't edge cases; they're part of the main experience. It pushed me to design beyond the screen, treating asynchronous workflows, audit requirements, and legal disclosures as first-class UX problems rather than purely technical or business concerns.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Case study · payments &amp; financial operations · built for portfolio use</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
